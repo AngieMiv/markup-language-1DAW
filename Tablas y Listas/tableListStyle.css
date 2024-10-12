@@ -1,0 +1,24 @@
+body {
+	font-family: Verdana;
+	font-size: larger;
+}
+
+table, th, td {
+	border-style:groove;
+	border-color: lightseagreen;
+	background-color: lightcyan;
+}
+
+ol {
+	border-radius: 5%;
+	width: 50%;
+	background: lightcoral;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+ul {
+	border-radius: 5%;
+	background-color: lightpink;
+}
