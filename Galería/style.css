@@ -1,0 +1,8 @@
+header
+{
+	width:auto;
+	max-height: 5%;
+	background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,246,1) 100%);
+	border: 5px solid rgba(202,60,240,1);
+	text-align: center;
+}
