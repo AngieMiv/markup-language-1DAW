@@ -1,5 +1,3 @@
-let theImg = document.querySelector("img");
-
 function toBunny(){
 	document.getElementById('bear').src='bunny.jpg';
 	document.getElementById('bear').id='bunny';

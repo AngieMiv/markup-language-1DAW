@@ -1,0 +1,70 @@
+<!--
+	Angie Ibarrola V.
+	Alba Martínez G.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Preguntas - Trivia</title>
+
+	<!--Para colocar una fuente y asegurarnos de que esté disponible para el usuario, 
+		importamos la fuente desde google fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="./css/style.css"> <!--llama a la página de estilo de la web-->
+	<script src="js/script.js"></script> <!--llama a la página del JavaScript-->
+</head>
+<body>
+	<div id="header">
+		<h1 id="think">Piensa en estas preguntas:</h1>
+	</div>
+	<div id="main">
+		<div class="cards">
+			<div class="card">
+				<div class="question">¿Cuál es el color que desaparece primero en la oscuridad?</div>
+				<img src="imagenes/pregunta1.jpeg">
+				<ol class="options" type="a"> <!--para que la lista ordenada sea alfabética definimos el type-->
+					<li>El negro</li>
+					<li>El rojo</li>
+					<li>El blanco</li>
+					<li>El violeta</li>
+				</ol>
+				<div class="answer" id="a1"></div>
+			</div>
+			<div class="card">
+				<div class="question">¿Como se le llama a los “tipos” de neutrinos?</div>
+				<img src="imagenes/pregunta2.jpeg">
+				<ol class="options" type="a">
+					<li>Fermiones</li>
+					<li>Guones</li>
+					<li>Sabores</li>
+					<li>Colores</li>
+				</ol>
+				<div class="answer" id="a2"></div>
+			</div>
+			<div class="card">
+				<div class="question">¿Cuántos planetas caben entre la Tierra y la Luna?</div>
+				<img src="imagenes/pregunta3.jpeg">
+				<ol class="options" type="a">
+					<li>Uno, el más pequeño</li>
+					<li>Uno de los gigantes gaseosos</li>
+					<li>Los dos más pequeños</li>
+					<li>Todos los planetas del Sistema Solar</li>
+				</ol>
+				<div class="answer" id="a3"></div>
+			</div>
+		</div>
+		<button class="btn" onclick="showAnswer(), changeImage()" >Ver las respuestas</button>
+	</div>
+	<div id="footer">
+		<div class="authors">
+			<p>Alba & Angie</p>
+			<p>Todos los derechos reservados</p>
+		</div>
+		<a href="index.html">Volver a la página principal</a>
+	</div>
+</body>
+</html>
