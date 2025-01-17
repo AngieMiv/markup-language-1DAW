@@ -19,11 +19,11 @@
 </head>
 <body>
 	<div id="header">
-		<h1 id="think">Piensa en estas preguntas:</h1>
+		<h1 id="think">Piensa en estas preguntas:</h1> <!-- Este encabezado cambiará con el JS -->
 	</div>
 	<div id="main">
 		<div class="cards">
-			<div class="card">
+			<div class="card"> <!-- definimos la clase "card" para darle un estilo predefinido para todas las cartas individuales -->
 				<div class="question">¿Cuál es el color que desaparece primero en la oscuridad?</div>
 				<img src="imagenes/pregunta1.jpeg">
 				<ol class="options" type="a"> <!--para que la lista ordenada sea alfabética definimos el type-->
@@ -32,7 +32,7 @@
 					<li>El blanco</li>
 					<li>El violeta</li>
 				</ol>
-				<div class="answer" id="a1"></div>
+				<div class="answer" id="a1"></div> <!-- Div vacío para completarlo al darle al botón -->
 			</div>
 			<div class="card">
 				<div class="question">¿Como se le llama a los “tipos” de neutrinos?</div>
@@ -57,12 +57,13 @@
 				<div class="answer" id="a3"></div>
 			</div>
 		</div>
-		<button class="btn" onclick="showAnswer(), changeImage()" >Ver las respuestas</button>
+		<button class="btn" onclick="showAnswer(), changeImage()" >Ver las respuestas</button> <!-- "onclick" para que al hacer click al botón realice las dos funciones definidas en el JS -->
+		<a id="catCat" href="imagenes/mooncake.png" target="_blank"></div>
 	</div>
 	<div id="footer">
 		<div class="authors">
 			<p>Alba & Angie</p>
-			<p>Todos los derechos reservados</p>
+			<p>Todos los derechos reservados ©</p>
 		</div>
 		<a href="index.html">Volver a la página principal</a>
 	</div>

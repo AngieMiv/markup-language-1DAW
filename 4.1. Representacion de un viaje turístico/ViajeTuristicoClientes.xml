@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Viajes>
+	<viaje>
+		<viajeros>
+			<viajero id="1">
+				<nombre_cliente>Alba</nombre_cliente>
+				<apellidos_cliente>Martinez González</apellidos_cliente>
+			</viajero>
+			<viajero id="2">
+				<nombre_cliente>Óscar Andre</nombre_cliente>
+				<apellidos_cliente>Cebrián</apellidos_cliente>
+			</viajero>
+		</viajeros>
+		<detalles_viaje>
+			<fecha_inicio>2025-01-11</fecha_inicio>
+			<fecha_fin>2025-02-11</fecha_fin>
+			<origen>Madrid, España</origen>
+			<precio>5000$</precio>
+			<destinos_viaje>
+				<ciudad destino="1">Nara, Japón</ciudad>
+				<hotel destino="1">Deer hostel</hotel>
+				<num_noches destino="1">15</num_noches>
+				<ciudad destino="2">Torsken, Noruega</ciudad>
+				<hotel destino="2">Torsken Brygge</hotel>
+				<num_noches destino="2">15</num_noches>
+			</destinos_viaje>
+		</detalles_viaje>
+	</viaje>
+	<info-html>
+		<![CDATA[
+			<DOCTYPE! html>
+			<html>
+			<head>
+				<link rel="stylesheet" href="./style.css>
+			</head>
+			<body>
+				<h1>Hello World</h1>
+			</body>
+			</html>
+		]]>
+	</info-html>
+	<info-css>
+	<![CDATA[
+		body {
+			background-color: blue;
+		}
+	]]>
+	</info-css>
+</Viajes>

@@ -14,6 +14,8 @@ body {
 	font-weight: 400;
 	font-style: normal;
 
+	/* Aplicamos un color de fondo fijo, pero el fondo visible será el linear-gradient
+	   con el background-image*/
 	background-color:  rgb(15, 34, 34);
 	background-image: linear-gradient(darkslateblue, aqua);
 	background-repeat: no-repeat;
@@ -39,7 +41,7 @@ body {
 	flex-grow: 1;
 
 	/* Usamos flex para centrar el contenido.
-	  Ver: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+	   Ver: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -104,7 +106,7 @@ body {
 
 }
 
-/* Si está vacío, lo ocultamos*/
+/*Si está vacío, lo ocultamos*/
 .card .answer:empty {
 	display: none;
 }
@@ -127,6 +129,10 @@ body {
 
 .btn:hover{
 	background-color: rgb(128, 218, 114);
+}
+
+#catCat:empty {
+	display: none;
 }
 
 #footer {
