@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+	<!ELEMENT biblioteca (libro+, autor+, comentario*, seccion*,fecha_creacion,etiquetas)>
+		<!ELEMENT libro (titulo, fecha, resumen)>
+			<!ELEMENT titulo (#PCDATA)>
+			<!ELEMENT fecha (#PCDATA)>
+			<!ELEMENT resumen (#PCDATA)>
+		<!ELEMENT autor (nombre, nacionalidad)>
+			<!ELEMENT nombre (#PCDATA)>
+			<!ELEMENT nacionalidad (#PCDATA)>
+		<!ELEMENT comentario ANY>
+		<!ELEMENT seccion (subseccion*)>
+		<!ELEMENT subseccion (#PCDATA)>
+		<!ELEMENT fecha_creacion (#PCDATA)>
+		<!ELEMENT etiquetas (etiqueta+)>
+			<!ELEMENT etiqueta (#PCDATA)>
+]>
+<biblioteca>
+	<libro>
+		<titulo>The name of the Wind</titulo>
+		<fecha>01/01/2007</fecha>
+		<resumen>First book of the trilogy, relates the story of Kvothe, known as the murederer of kings.</resumen>
+	</libro>
+	<autor>
+		<nombre>Patrick Rothfuss</nombre>
+		<nacionalidad>American</nacionalidad>
+	</autor>
+	<comentario>Seems like he ain't working on the 3rd book</comentario>
+	<fecha_creacion>01/01/2013</fecha_creacion>
+	<etiquetas>
+		<etiqueta>Kingkiller</etiqueta>
+		<etiqueta>Fantasy</etiqueta>
+	</etiquetas>
+</biblioteca>

@@ -1,0 +1,31 @@
+<!-- Archivo XML con DTD que define una galería de arte -->
+<!DOCTYPE galeria [
+  <!ELEMENT galeria (obra+)>
+  <!ELEMENT obra (#PCDATA)>
+
+  <!-- Ejemplo 1: Atributo con valor predeterminado -->
+  <!-- El atributo "ubicacion" es opcional. Si no se especifica, se asigna el valor "sala principal". -->
+  <!ATTLIST obra 
+            ubicacion CDATA "sala principal">
+
+  <!-- Ejemplo 2: Atributo obligatorio con #REQUIRED -->
+  <!-- El atributo "id" es obligatorio y debe ser único en el documento. -->
+  <!ATTLIST obra 
+            id ID #REQUIRED>
+
+  <!-- Ejemplo 3: Atributo opcional con #IMPLIED -->
+  <!-- El atributo "artista" es opcional. Si no se especifica, no tendrá ningún valor. -->
+  <!ATTLIST obra 
+            artista CDATA #IMPLIED>
+
+  <!-- Ejemplo 4: Atributo con lista enumerada -->
+  <!-- El atributo "tipo" solo puede tomar uno de los valores: "pintura", "escultura", "fotografia". -->
+  <!ATTLIST obra 
+            tipo (pintura | escultura | fotografia) "pintura">
+]>
+
+<galeria>
+	<obra id="hola">HOLA</obra>
+	<obra id="_barraBaja" ubicacion="low bar">Barra Baja</obra>
+	<obra id="id3" ubicacion="letraNumero" artista="Arba" tipo="escultura"></obra>
+</galeria>

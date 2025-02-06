@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Viajes [
+	<!ELEMENT Viajes (viaje, info-html, info-css)>
+	<!ELEMENT viaje (viajeros, detalles_viaje)>
+		<!ELEMENT viajeros (viajero+)> <!-- con el "+" indicamos que pueden haber 1 o más ocurrencias-->
+			<!ELEMENT viajero (nombre_cliente*, apellidos_cliente)> <!--con el "*" indicamos que puede haber 0 o más ocurrencias-->
+				<!ATTLIST viajero id CDATA #REQUIRED> <!-- definimos un atributo a un elemento-->
+				<!ELEMENT nombre_cliente (#PCDATA)>
+				<!ELEMENT apellidos_cliente (#PCDATA)>
+		<!ELEMENT detalles_viaje (fecha_inicio, fecha_fin, origen, precio, destinos_viaje)>
+			<!ELEMENT fecha_inicio (#PCDATA)>
+			<!ELEMENT fecha_fin (#PCDATA)>
+			<!ELEMENT origen (#PCDATA)>
+			<!ELEMENT precio (#PCDATA)>
+			<!ELEMENT destinos_viaje (ciudad, hotel, num_noches)+>
+				<!ELEMENT ciudad (#PCDATA)>
+					<!ATTLIST ciudad destino CDATA #REQUIRED>
+				<!ELEMENT hotel (#PCDATA)>
+					<!ATTLIST hotel destino CDATA #REQUIRED>
+				<!ELEMENT num_noches (#PCDATA)>
+					<!ATTLIST num_noches destino CDATA #REQUIRED>
+	<!ELEMENT info-html ANY>
+	<!ELEMENT info-css ANY>
+]>
 <Viajes>
 	<viaje>
 		<viajeros>
