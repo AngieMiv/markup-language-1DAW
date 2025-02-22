@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<series>
+	<serie>
+		<titulo>Breaking Bad</titulo>
+		<temporadas>5</temporadas>
+		<capitulos>62</capitulos>
+		<emision>2008</emision>
+		<finalizada>true</finalizada>
+	</serie>
+	<serie>
+	<titulo>Attack on Titan</titulo>
+		<temporadas>4</temporadas>
+		<capitulos>89</capitulos>
+		<emision>2013</emision>
+		<finalizada>true</finalizada>	
+	</serie>
+	<serie>
+		<titulo>How I Met Your Mother</titulo>
+		<temporadas>9</temporadas>
+		<capitulos>208</capitulos>
+		<emision>2005</emision>
+		<finalizada>true</finalizada>			
+	</serie>
+	<serie>
+		<titulo>Arcane</titulo>
+		<temporadas>2</temporadas>
+		<capitulos>18</capitulos>
+		<emision>2021</emision>
+		<finalizada>true</finalizada>
+	</serie>
+	<serie>
+		<titulo>Los Soprano</titulo>
+		<temporadas>6</temporadas>
+		<capitulos>86</capitulos>
+		<emision>1999</emision>
+		<finalizada>true</finalizada>
+	</serie>
+	<serie>
+		<titulo>The Simpsons</titulo>
+		<temporadas>33</temporadas>
+		<capitulos>717</capitulos>
+		<emision>1989</emision>
+		<finalizada>false</finalizada>
+	</serie>
+</series>
