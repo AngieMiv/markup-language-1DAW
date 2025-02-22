@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persona sexo="Masculino" pais="España" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd_aresolver_conatributos.xsd">
+    <nombre>Nick</nombre>
+    <apellido>Magallanes</apellido>
+    <edad>20</edad>
+    <telefono>600548345</telefono>
+    <vehiculo color="rojo">
+        <coche>Terreneitor 3000</coche>
+    </vehiculo>
+    <direccion tipo="Piso">
+        <calle>Extremadura</calle>
+        <numero>21</numero>
+        <codigoPostal>45513</codigoPostal>    
+    </direccion>
+</persona>

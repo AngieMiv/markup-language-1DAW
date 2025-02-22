@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd_aresolver.xsd">
+  <nombre>Nickolas Magallanes</nombre>
+  <edad>20</edad>
+  <direccion>
+    <calle>Extremadura</calle>
+    <ciudad>Toledo</ciudad>
+    <codigoPostal>45513</codigoPostal>
+  </direccion>
+  <contactos>
+    <email>nick3m9220@gmail.com</email>
+    <telefono>600548345</telefono>
+  </contactos>
+  <informacion>
+    <empleo>
+        <puesto>Programador</puesto>
+        <empresa>Stark Enterprises</empresa>
+    </empleo>
+  </informacion>
+</persona>

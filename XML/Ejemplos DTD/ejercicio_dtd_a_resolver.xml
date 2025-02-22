@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+  <!ELEMENT biblioteca (libro+, autor+, comentario*, seccion*,fecha_creacion,etiquetas)>
+  <!ELEMENT libro (titulo, fecha, resumen)>
+  <!ELEMENT titulo (#PCDATA)>
+  <!ELEMENT fecha (#PCDATA)>
+  <!ELEMENT resumen (#PCDATA)>
+  <!ELEMENT autor (nombre, nacionalidad)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT nacionalidad (#PCDATA)>
+  <!ELEMENT comentario ANY>
+  <!ELEMENT seccion (subseccion*)>
+  <!ELEMENT subseccion (#PCDATA)>
+  <!ELEMENT fecha_creacion (#PCDATA)>
+  <!ELEMENT etiquetas (etiqueta+)>
+  <!ELEMENT etiqueta (#PCDATA)>
+]>

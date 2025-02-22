@@ -1,0 +1,10 @@
+<!-- xmlns:xs define el prefijo 'xs' asociado al espacio de nombres XML Schema
+Instance. Este espacio de nombres utiliza la URL "http://www.w3.org/2001/XMLSchemainstance", que es estándar y fija. Es obligatorio usar esta URL. -->
+<!-- xs:noNamespaceSchemaLocation indica el archivo .xsd que contiene las reglas
+para validar este documento XML. Aquí se supone que el archivo se llama
+'persona.xsd' y está en el mismo directorio. -->
+<persona xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="persona.xsd">
+	<nombre>JuanJo</nombre>
+	<edad>32</edad>
+</persona>

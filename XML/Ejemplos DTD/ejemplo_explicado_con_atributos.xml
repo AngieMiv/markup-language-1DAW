@@ -1,0 +1,47 @@
+<!-- Archivo XML con DTD que demuestra diferentes usos de ATTLIST -->
+<!DOCTYPE biblioteca [
+  <!-- Definición de elementos -->
+  <!ELEMENT biblioteca (libro+)>
+  <!ELEMENT libro (#PCDATA)>
+
+  <!-- Ejemplo 1: Atributo con valor predeterminado -->
+  <!-- El atributo "idioma" es opcional. Si no se especifica, su valor será "es". -->
+  <!ATTLIST libro 
+            idioma CDATA "es">
+
+  <!-- Ejemplo 2: Atributo obligatorio con #REQUIRED -->
+  <!-- El atributo "id" es obligatorio y debe ser único en el documento. -->
+  <!ATTLIST libro 
+            id ID #REQUIRED>
+
+  <!-- Ejemplo 3: Atributo opcional con #IMPLIED -->
+  <!-- El atributo "autor" es opcional. Si no se especifica, no tendrá valor. -->
+  <!ATTLIST libro 
+            autor CDATA #IMPLIED>
+
+  <!-- Ejemplo 4: Atributo con lista enumerada -->
+  <!-- El atributo "genero" solo puede tomar uno de los valores definidos: "ficcion", "no-ficcion", "poesia". -->
+  <!ATTLIST libro 
+            genero (ficcion | no-ficcion | poesia) "ficcion">
+]>
+
+<!-- Contenido del XML -->
+<biblioteca>
+  <!-- Ejemplo válido: El atributo "idioma" toma el valor por defecto "es". -->
+  <libro id="b1">Don Quijote de la Mancha</libro>
+
+  <!-- Ejemplo válido: Atributo "idioma" especificado explícitamente. -->
+  <libro id="b2" idioma="en">Hamlet</libro>
+
+  <!-- Ejemplo válido: Atributo "autor" opcional especificado. -->
+  <libro id="b3" autor="Miguel de Cervantes">La Galatea</libro>
+
+  <!-- Ejemplo válido: Atributo "genero" especificado explícitamente. -->
+  <libro id="b4" genero="poesia">Rimas y Leyendas</libro>
+
+  <!-- Ejemplo válido: Atributo "genero" toma el valor por defecto "ficcion". -->
+  <libro id="b5">Cien Años de Soledad</libro>
+
+  <!-- Ejemplo válido: Atributo "genero" y "autor" opcionales no especificados. -->
+  <libro id="b6">El Principito</libro>
+</biblioteca>

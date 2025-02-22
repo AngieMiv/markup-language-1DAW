@@ -1,0 +1,56 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definición de elemento persona con tipo complejo -->
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="edad" type="xs:int" minOccurs="1" maxOccurs="1"/>
+        
+        <xs:element name="direccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="calle" type="xs:string" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="ciudad" type="xs:string" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="codigoPostal" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="contactos">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="telefono" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="informacion">
+          <xs:complexType>
+            <xs:choice>
+              <xs:element name="empleo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="puesto" type="xs:string"/>
+                    <xs:element name="empresa" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="estudios">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nivel" type="xs:string"/>
+                    <xs:element name="universidad" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

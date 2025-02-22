@@ -1,0 +1,77 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Elemento global -->
+  <xs:element name="Inventario">
+    <xs:complexType>
+      <xs:sequence>
+
+        <!-- Producto -->
+        <xs:element name="Producto" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+
+              <!-- Elemento con restricción 'length' -->
+              <xs:element name="CodigoProducto" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- Elemento con restricción 'minLength' -->
+              <xs:element name="NombreProducto" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- Elemento con restricción 'maxLength' -->
+              <xs:element name="Descripcion" minOccurs="0" maxOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- Elemento con restricción 'enumeration' -->
+              <xs:element name="Categoria" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Electrónica" />
+                    <xs:enumeration value="Ropa" />
+                    <xs:enumeration value="Hogar" />
+                    <xs:enumeration value="Refresco" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- Elemento con restricción 'minInclusive' y 'maxInclusive' -->
+              <xs:element name="Precio" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:decimal">
+                    <xs:minInclusive value="0.01" />
+                    <xs:maxInclusive value="9999.99" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+
+            <!-- Atributo con restricción 'maxLength' -->
+            <xs:attribute name="Disponible" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="Sí" />
+                  <xs:enumeration value="No" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

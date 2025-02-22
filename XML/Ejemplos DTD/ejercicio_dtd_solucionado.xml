@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+  <!-- DTD Interno que define la estructura del XML -->
+  
+  <!-- Definimos un elemento 'biblioteca' que contiene varios elementos -->
+  <!ELEMENT biblioteca (libro+, autor+, comentario*, seccion*,fecha_creacion,etiquetas)>
+  
+  <!-- 'libro' es un elemento que contiene un conjunto de otros elementos como título, fecha y resumen -->
+  <!ELEMENT libro (titulo, fecha, resumen)>
+  
+  <!-- 'titulo' es un elemento que contiene texto (PCDATA). -->
+  <!ELEMENT titulo (#PCDATA)>
+  
+  <!-- 'fecha' es un elemento que contiene texto (PCDATA). -->
+  <!ELEMENT fecha (#PCDATA)>
+  
+  <!-- 'resumen' es un elemento que contiene texto (PCDATA). -->
+  <!ELEMENT resumen (#PCDATA)>
+  
+  <!-- 'autor' es un elemento que contiene una lista de otros elementos como nombre y nacionalidad -->
+  <!ELEMENT autor (nombre, nacionalidad)>
+  
+  <!-- 'nombre' es un elemento que contiene texto (PCDATA). -->
+  <!ELEMENT nombre (#PCDATA)>
+  
+  <!-- 'nacionalidad' es un elemento que contiene texto (PCDATA). -->
+  <!ELEMENT nacionalidad (#PCDATA)>
+  
+  <!-- 'comentario' es un elemento que puede contener cualquier tipo de contenido. -->
+  <!ELEMENT comentario ANY>
+  
+  <!-- 'seccion' es un elemento que puede contener varios 'subseccion', o ninguno. -->
+  <!ELEMENT seccion (subseccion*)>
+  
+  <!-- 'subseccion' es un elemento que contiene texto (PCDATA). -->
+  <!ELEMENT subseccion (#PCDATA)>
+  
+  <!-- 'fecha_creacion' es un elemento opcional que puede contener texto (PCDATA). -->
+  <!ELEMENT fecha_creacion (#PCDATA)>
+  
+  <!-- 'etiquetas' es un elemento que puede contener una lista de etiquetas. -->
+  <!ELEMENT etiquetas (etiqueta+)>
+  
+  <!-- 'etiqueta' es un elemento que contiene texto (PCDATA). -->
+  <!ELEMENT etiqueta (#PCDATA)>
+  
+]>
+
+<!-- Ahora comienza el XML que se valida según el DTD definido -->
+<biblioteca>
+  <!-- Libro 1 -->
+  <libro>
+    <titulo>Introducción a XML</titulo>
+    <fecha>2023-01-01</fecha>
+    <resumen>Este libro cubre los fundamentos de XML y su uso práctico.</resumen>
+  </libro>
+
+  <!-- Libro 2 -->
+  <libro>
+    <titulo>Avanzado en DTD</titulo>
+    <fecha>2024-02-10</fecha>
+    <resumen>Explora técnicas avanzadas para definir y validar DTDs en XML.</resumen>
+  </libro>
+
+  <!-- Autor 1 -->
+  <autor>
+    <nombre>Juan Pérez</nombre>
+    <nacionalidad>Española</nacionalidad>
+  </autor>
+
+  <!-- Autor 2 -->
+  <autor>
+    <nombre>Maria Gómez</nombre>
+    <nacionalidad>Argentina</nacionalidad>
+  </autor>
+
+  <!-- Comentario 1 -->
+  <comentario>
+    Este libro es muy útil para aprender XML y DTDs.
+  </comentario>
+
+  <!-- Sección 1 -->
+  <seccion>
+    <subseccion>Fundamentos de XML</subseccion>
+    <subseccion>Introducción a DTDs</subseccion>
+  </seccion>
+
+  <!-- Sección 2 -->
+  <seccion>
+    <subseccion>Uso de Entidades en XML</subseccion>
+  </seccion>
+
+  <!-- Fecha de creación (opcional) -->
+  <fecha_creacion>2023-11-12</fecha_creacion>
+
+  <!-- Etiquetas -->
+  <etiquetas>
+    <etiqueta>XML</etiqueta>
+    <etiqueta>DTD</etiqueta>
+    <etiqueta>Introducción</etiqueta>
+  </etiquetas>
+</biblioteca>

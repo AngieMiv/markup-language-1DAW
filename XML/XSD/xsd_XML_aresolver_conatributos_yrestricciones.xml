@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd_aresolver_conatributos_yrestricciones.xsd">
+    <Producto Disponible="Sí">
+        <CodigoProducto>69696969</CodigoProducto>
+        <NombreProducto>Tula</NombreProducto>
+        <Descripcion>La bebida refrescante chilena</Descripcion>
+        <Categoria>Refresco</Categoria>
+        <Precio>69.69</Precio>
+    </Producto>
+    <Producto Disponible="Sí">
+        <CodigoProducto>77777777</CodigoProducto>
+        <NombreProducto>Redbull zapatos</NombreProducto>
+        <Descripcion>Los zapatos energizante de España</Descripcion>
+        <Categoria>Ropa</Categoria>
+        <Precio>7.50</Precio>
+    </Producto>
+    <Producto Disponible="No">
+        <CodigoProducto>54877896</CodigoProducto>
+        <NombreProducto>Laptop Gamer</NombreProducto>
+        <Descripcion>Quien no quisiera una</Descripcion>
+        <Categoria>Electrónica</Categoria>
+        <Precio>850.99</Precio>
+    </Producto>
+</Inventario>

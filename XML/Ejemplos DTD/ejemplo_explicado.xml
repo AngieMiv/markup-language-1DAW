@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE documento [
+  <!-- DTD Interno que define la estructura del XML -->
+  
+  <!-- Definimos un elemento 'documento' que contiene varios elementos -->
+  <!ELEMENT documento (titulo, autor, contenido, categoria, meta)>
+  
+  <!-- 'titulo' es un elemento que contiene texto (PCDATA). -->
+  <!ELEMENT titulo (#PCDATA)>
+  
+  <!-- 'autor' es un elemento que contiene texto (PCDATA). -->
+  <!ELEMENT autor (#PCDATA)>
+  
+  <!-- 'contenido' es un elemento que puede contener un conjunto de elementos
+       como 'parrafo', 'imagen' o ambos. -->
+  <!ELEMENT contenido (parrafo+, imagen*, enlace, comentarios)> 
+  
+  <!-- 'parrafo' es un elemento que contiene texto (PCDATA). -->
+  <!ELEMENT parrafo (#PCDATA)>
+  
+  <!-- 'imagen' es un elemento vacío, lo que significa que no tiene contenido.
+       Se usa generalmente para describir una imagen sin contenido interno. -->
+  <!ELEMENT imagen EMPTY>
+  
+  <!-- 'enlace' es un elemento que puede contener texto (PCDATA) o estar vacío. -->
+  <!ELEMENT enlace (#PCDATA)>
+  
+  <!-- 'comentarios' es un elemento que puede contener cualquier tipo de contenido.
+       Esto incluye texto, otros elementos o cualquier cosa. -->
+  <!ELEMENT comentarios ANY>
+  
+  <!-- 'meta' es un elemento que puede contener texto (PCDATA) o otros elementos.
+       El contenido mixto debe terminar con ')*' indicando que puede ser
+       texto o cualquier cantidad de otros elementos, incluidos ninguno. -->
+  <!ELEMENT meta (#PCDATA | enlace | fecha)*>
+  
+  <!-- 'categoria' es un elemento que contiene una lista de otros elementos 'subcategoria'. -->
+  <!ELEMENT categoria (subcategoria+)>
+  
+  <!-- 'subcategoria' es un elemento que contiene texto (PCDATA). -->
+  <!ELEMENT subcategoria (#PCDATA)>
+  
+  <!-- 'fecha' es un elemento que puede contener texto (PCDATA) o estar vacío. -->
+  <!ELEMENT fecha (#PCDATA)>
+]>
+
+<!-- Ahora comienza el XML que se valida según el DTD definido -->
+<documento>
+  <!-- El título del documento -->
+  <titulo>Mi Documento XML</titulo>
+
+  <!-- El autor del documento -->
+  <autor>Juan Pérez</autor>
+
+  <!-- Contenido del documento -->
+  <contenido>
+    <!-- El primer párrafo, que contiene solo texto (PCDATA). -->
+    <parrafo>Este es el primer párrafo del contenido.</parrafo>
+    
+    <!-- El segundo párrafo -->
+    <parrafo>Este es el segundo párrafo del contenido.</parrafo>
+
+    <!-- Una imagen vacía -->
+    <imagen />
+    
+    <!-- Un enlace que contiene texto -->
+    <enlace>Visitar página de ejemplo</enlace>
+    
+    <!-- Comentarios que pueden contener cualquier tipo de contenido -->
+    <comentarios>Este es un comentario que puede tener cualquier cosa, incluyendo otros elementos.</comentarios>
+  </contenido>
+
+  <!-- Categoría con varias subcategorías -->
+  <categoria>
+    <subcategoria>Subcategoría 1</subcategoria>
+    <subcategoria>Subcategoría 2</subcategoria>
+  </categoria>
+
+  <!-- Un meta elemento que puede estar vacío o contener texto y enlaces -->
+  <meta>
+    Información adicional del documento, con <enlace>un enlace aquí</enlace>.
+      <!-- Fecha, puede estar vacío o tener texto -->
+  <fecha>2024-12-16</fecha>
+  </meta>
+
+
+</documento>

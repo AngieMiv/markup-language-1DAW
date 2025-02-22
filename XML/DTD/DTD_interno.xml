@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD INTERNO-->
+<!DOCTYPE persona [
+<!ELEMENT persona (nombre, edad)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT edad (#PCDATA)>
+]>
+	<!-- si fuera DTD EXTERNO:
+<!DOCTYPE persona SYSTEM "DTD_externo.dtd">
+	-->
+<persona>
+	<nombre>JuanJo</nombre>
+	<edad>32</edad>
+</persona>

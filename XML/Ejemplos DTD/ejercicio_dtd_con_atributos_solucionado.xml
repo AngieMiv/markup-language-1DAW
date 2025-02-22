@@ -1,0 +1,46 @@
+<!-- Archivo XML con DTD que define una galería de arte -->
+<!DOCTYPE galeria [
+  <!ELEMENT galeria (obra+)>
+  <!ELEMENT obra (#PCDATA)>
+
+  <!-- Ejemplo 1: Atributo con valor predeterminado -->
+  <!-- El atributo "ubicacion" es opcional. Si no se especifica, se asigna el valor "sala principal". -->
+  <!ATTLIST obra 
+            ubicacion CDATA "sala principal">
+
+  <!-- Ejemplo 2: Atributo obligatorio con #REQUIRED -->
+  <!-- El atributo "id" es obligatorio y debe ser único en el documento. -->
+  <!ATTLIST obra 
+            id ID #REQUIRED>
+
+  <!-- Ejemplo 3: Atributo opcional con #IMPLIED -->
+  <!-- El atributo "artista" es opcional. Si no se especifica, no tendrá ningún valor. -->
+  <!ATTLIST obra 
+            artista CDATA #IMPLIED>
+
+  <!-- Ejemplo 4: Atributo con lista enumerada -->
+  <!-- El atributo "tipo" solo puede tomar uno de los valores: "pintura", "escultura", "fotografia". -->
+  <!ATTLIST obra 
+            tipo (pintura | escultura | fotografia) "pintura">
+]>
+
+<!-- Contenido del XML -->
+<galeria>
+  <!-- Ejemplo válido: Atributo "ubicacion" toma el valor por defecto "sala principal". -->
+  <obra id="obra1">La noche estrellada</obra>
+
+  <!-- Ejemplo válido: Atributo "ubicacion" especificado explícitamente. -->
+  <obra id="obra2" ubicacion="sala de exposiciones">El pensador</obra>
+
+  <!-- Ejemplo válido: Atributo "artista" opcional especificado. -->
+  <obra id="obra3" artista="Leonardo da Vinci">La última cena</obra>
+
+  <!-- Ejemplo válido: Atributo "tipo" especificado explícitamente. -->
+  <obra id="obra4" tipo="escultura">David</obra>
+
+  <!-- Ejemplo válido: Atributo "tipo" toma el valor por defecto "pintura". -->
+  <obra id="obra5" artista="Claude Monet">Impresión, sol naciente</obra>
+
+  <!-- Ejemplo válido: Atributo "artista" y "tipo" opcionales no especificados. -->
+  <obra id="obra6">Fotografía sin título</obra>
+</galeria>

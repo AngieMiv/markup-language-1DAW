@@ -1,0 +1,30 @@
+<!-- La raíz del XML Schema se declara como
+	<xs:schema>.
+Aquí se utiliza el prefijo
+	'xs',
+que está asociado al espacio de nombres estándar de XML Schema
+(http://www.w3.org/2001/XMLSchema). -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- Se define el elemento raíz 'persona' del XML. Este debe aparecer como el
+elemento principal en cualquier documento XML que use este esquema. -->
+<xs:element name="persona">
+
+	<!-- 'persona' es un tipo complejo, lo que significa que contiene otros
+	elementos dentro de sí. -->
+	<xs:complexType>
+
+		<!-- El orden de los elementos hijos es importante: deben aparecer en
+		el XML en el mismo orden especificado aquí. -->
+		<xs:sequence>
+
+			<!-- Se define el elemento 'nombre', de tipo string (texto). -->
+			<xs:element name="nombre" type="xs:string"/>
+
+			<!-- Se define el elemento 'edad', de tipo entero (int). -->
+			<xs:element name="edad" type="xs:int"/>
+			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+</xs:schema>

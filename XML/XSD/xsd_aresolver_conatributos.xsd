@@ -1,0 +1,44 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Elemento global único (raíz) -->
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Elementos secuenciales -->
+        <xs:element name="nombre" type="xs:string" />
+        <xs:element name="apellido" type="xs:string" />
+        <xs:element name="edad" type="xs:int" />
+        <xs:element name="telefono" type="xs:string" />
+        <!-- Uso de xs:choice -->
+        <xs:element name="vehiculo">
+          <xs:complexType>
+              <xs:choice>
+                <xs:element name="coche" type="xs:string" />
+                <xs:element name="moto" type="xs:string" />
+                <xs:element name="bicicleta" type="xs:string" />
+              </xs:choice>
+            <!-- Atributo con valor fijo -->
+            <xs:attribute name="color" type="xs:string" fixed="rojo" />
+          </xs:complexType>
+        </xs:element>
+        <!-- Uso de xs:all -->
+        <xs:element name="direccion">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="calle" type="xs:string" />
+              <xs:element name="numero" type="xs:int" />
+              <xs:element name="codigoPostal" type="xs:string" />
+            </xs:all>
+            <!-- Atributo opcional -->
+            <xs:attribute name="tipo" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <!-- Atributo obligatorio con valor predeterminado -->
+      <xs:attribute name="pais" type="xs:string" default="España" />
+      <!-- Atributo obligatorio -->
+      <xs:attribute name="sexo" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
