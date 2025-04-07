@@ -1,0 +1,39 @@
+#header{ /*Con la almohadilla llamamos al id del div al que le hemos dado dicho identificador*/
+	background: linear-gradient(lightblue,pink); /*Añadimos fondo gradiente linear de dos colores*/
+	padding: 1%; /*El padding o relleno se usa para crear espacio al rededor del contenido de un elemento dentro de cualquier borde definido*/
+	text-align: center; /*Alineamos todo el texto al centro (u otra dirección según el valor que le demos; como le hemos puesto center, se alinea al centro)*/
+}
+
+body{
+	margin: 1%; /*Margin se utiliza para crear espacio alrededor de los elementos, en este caso, le aplicamos un margen de 1% a todo el cuerpo del html*/
+}
+
+h1{
+	font-family: monospace,'Lucida Console', Arial; /*definimos la fuente de todos los elementos h1, y ponemos varios por si el navegador no soporta alguna fuente*/
+}
+
+.intro{ /*Con el punto llamamos a la clase que hemos definido a un elemento, en este caso al párrafo del contenido (content)*/
+	text-align: center;
+	font-family: monospace,'Lucida Console', Arial;
+}
+
+h2, li{ /*Usamos el selector múltiple para marcar estos dos elementos y que tengan el mismo estilo*/
+	font-family: 'Lucida Console', Arial, monospace;
+}
+
+h3{
+	font-family: 'Lucida Console', Arial, monospace;
+	font-style: italic; /*Le decimos que la fuente de los h3 debe ser itálica*/
+	text-decoration-line: overline underline; /*Esta propiedad agrega la línea de decoración que elijamos al texto*/
+}
+
+#venn{
+	width: 30%;
+	padding-left: 2%;
+}
+
+#footer{
+	background: linear-gradient(lightblue,pink);
+	padding: 1%;
+	text-align: right;
+}

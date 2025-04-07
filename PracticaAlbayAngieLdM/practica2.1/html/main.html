@@ -1,0 +1,50 @@
+<!--
+	Angie Ibarrola V.
+	Alba Martínez G.
+-->
+<!DOCTYPE html> <!--Esta declaración define que el tipo de documento es un HTML-->
+<html lang="en"> <!--Definimos el lenguaje de la página con este atributo-->
+<head>
+	<meta charset="UTF-8"> <!--El elemento meta con el atributo charset especifica el conjunto de caracteres-->
+	<title>BPD</title> <!--Esto define el título de la página, se mostrará en la pestaña del navegador-->
+	<link rel="stylesheet" href="../css/style.css"> <!--Es un link a una hoja de elemento externa, usada para definir el estilo de la página HTML.-->
+</head>
+<body> <!--Dividimos el cuerpo de la página en 3 divs, cabecera, contenido y pie de pagina-->
+	<div id="header"> <!--el elemento id se usa para identificar al div para darle estilo en el documento css-->
+		<h1> <!--Estos elementos van de h1 a h6, siendo el h1 el más importante.-->
+			Borderline Personality Disorder
+		</h1>
+		<h2>
+			Do I have BPD? or am I just pretending? lmao &#128128;
+		</h2>
+	</div>
+	<div id="content">
+		<p class="intro"> <!--Este elemento contiene un párrafo, el cual empieza en una nueva línea. Le damos una clase para darle un estilo concreto con css.-->
+			Borderline personality disorder (BPD) has long been believed to be a disorder that produces 
+			the most intense emotional pain and distress in those who have this condition.
+			<br> <!--Es un salto de línea. Es un elemento vacío, no tiene etiqueta final-->
+			Studies have shown that borderline patients experience chronic and significant emotional suffering and mental agony.
+		</p>
+		<h3>Some of the symptoms of BPD:</h3>
+		<ul> <!--Esta etiqueta significa lista desordenada (unordered list). Si fuera ordenada, sería una 'ol'-->
+			<li>Feeling of emptiness.</li> <!--Los elementos de las listas se definen con la etiqueta 'li'-->
+			<li>Emotinal instability.</li>
+			<li>Disturbed patterns of thinking or perception, including paranoia.</li>
+			<li>Impulsive behaviour.</li>
+			<li>Diffficulty controlling anger.</li>
+			<li>Intense but unstable relationhips, with frantic efforts to avoid real or imagined abandonment.</li>
+			<li>Suicidal or self-harming behaviour.</li>
+		</ul>
+		<img id="venn" src="..\imgs\BPD_ADHD_AUTISM.png" alt="BPD, ADHD and Autism Venn diagram"> <!--la etiqueta img sirve para mostrar una imagen con el atributo src, que contiene la direccion de la imagen.
+			En caso de que no se muestre la imagen, tenemos la etiqueta alt que nos sirve para mostrar un texto alternativo que describa la imagen.-->
+	</div>
+	<div id="footer">
+		<p title="BPD wiki"> <!--Con el atributo 'title', al pasar el ratón por encima de este párrafo, nos muestra un pop-up con el valor que le hemos otorgado al título.-->
+			You can find more info at this <a href="https://en.wikipedia.org/wiki/Borderline_personality_disorder">Wikipedia page about BPD.</a> <!--'a' muestra un texto visible para el lector,
+				 que contiene un hipervínculo, el cual lo definimos en el 'href'-->
+			<br>
+			<p>Alba y Angie</p>
+		</p>
+	</div>
+</body>
+</html>
